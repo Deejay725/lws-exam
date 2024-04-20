@@ -1,6 +1,7 @@
 Anime Binge
 
 Features:
+
 • Authentication system (signup, login, logout)
 • Create new anime
 • Display a list of anime
