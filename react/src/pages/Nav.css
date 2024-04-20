@@ -1,0 +1,16 @@
+/* Nav.css */
+
+/* Import the font if necessary */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the font styles */
+.logo {
+    font-family: 'Roboto', sans-serif; /* Use your desired font */
+    font-weight: 700; /* If your font supports different weights */
+}
+
+.nav-links {
+    font-family: 'Roboto', sans-serif; /* Apply the same font to navigation links */
+}
+
+/* Additional styles as needed */
