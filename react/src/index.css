@@ -215,71 +215,9 @@ table > tbody > tr > td {
     text-decoration: none;
 }
 
-/* DefaultLayout and GuestLayout */
-
-#defaultLayout {
-    display: flex;
-}
-
-#defaultLayout aside {
-    width: 240px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white aside background */
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-#defaultLayout aside > a {
-    display: block;
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    color: #343a40; /* Dark gray text color */
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-#defaultLayout aside > a:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background on hover */
-}
-
-#defaultLayout .content {
-    flex: 1;
-}
-
-#defaultLayout header {
-    height: 80px;
-    padding: 2rem 3rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white header background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-}
-
-#defaultLayout main {
-    padding: 2rem;
-}
-
-.animated {
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Error Message */
+.error-message {
+    color: #dc3545; /* Red color for error message */
+    font-size: 14px;
+    margin-top: 5px;
 }
