@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* General Styles */
 * {
     box-sizing: border-box;
 }
+
 html, body, #root, #defaultLayout, #guestLayout {
     min-height: 100vh;
 }
@@ -12,45 +15,70 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    color: #212121;
-    background-color: #f6f6f6;
+    font-size: 16px;
+    color: #ffffff; /* White text color */
+    background-color: #2d2f3e; /* Dark purple background */
+    background-image: url('https://images8.alphacoders.com/133/1331191.png'); /* Initial Kimetsu no Yaiba background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%); /* Apply grayscale filter to the background image */
+    animation: changeBackground 10s infinite; /* Animation for background image change */
+}
+
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: url('https://images8.alphacoders.com/133/1331191.png'); /* Initial Kimetsu no Yaiba background */
+    }
+    25% {
+        background-image: url('https://otakuusamagazine.com/wp-content/uploads/2022/11/aot-pt-3.png'); /* Second background image */
+    }
+    50% {
+        background-image: url('https://images4.alphacoders.com/134/1347881.jpeg'); /* Third background image */
+    }
+    75% {
+        background-image: url('https://images6.alphacoders.com/952/952646.png'); /* Fourth background image */
+    }
 }
 
 input {
     outline: 0;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     width: 100%;
-    border: 2px solid #e6e6e6;
+    border: 2px solid #5c5d7e; /* Dark purple border */
     margin: 0 0 15px;
     padding: 15px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s;
+    color: #5c5d7e; /* Dark purple text color */
+    border-radius: 10px; /* Rounded corners */
 }
 
 input:focus {
-    border-color: #5b08a7;
+    border-color: #ff8f00; /* Orange border color on focus */
+    box-shadow: 0 0 5px rgba(255, 143, 0, 0.5); /* Orange box shadow on focus */
 }
 
 .btn,
 .btn-add,
 .btn-edit,
 .btn-delete {
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     outline: 0;
-    background: #5b08a7;
+    background: linear-gradient(135deg, #ff8f00, #fca044); /* Gradient from orange to lighter orange */
     border: 0;
     text-decoration: none;
     padding: 15px;
     color: #FFFFFF;
     font-size: 16px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .btn-block {
@@ -59,33 +87,36 @@ input:focus {
 
 .btn-add,
 .btn-edit,
-.btn-delete{
+.btn-delete {
     padding: 0.5rem 0.75rem;
     font-size: 14px;
-    border-radius: 4px;
 }
+
 .btn-add {
-    background-color: #00a762;
+    background: linear-gradient(135deg, #007bff, #3797f0); /* Gradient from blue to lighter blue */
 }
+
 .btn-delete {
-    background-color: #b72424;
+    background: linear-gradient(135deg, #f64747, #fb8686); /* Gradient from red to lighter red */
 }
 
 .btn-logout {
     text-decoration: none;
     padding: 0.75rem 1.5rem;
-    color: #212121;
-    transition: all 0.3s;
-    border-radius: 6px;
+    color: #ffffff; /* White text color */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
 }
+
 .btn-logout:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #6c757d; /* Gray background on hover */
+    color: #ffffff; /* White text color on hover */
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
-    background: #5b08a7;
+    background: linear-gradient(135deg, #ff6f00, #fb9a3f); /* Darker gradient on hover */
 }
 
 .text-center {
@@ -101,29 +132,36 @@ table {
 table > thead > tr > th {
     text-align: left;
     padding: 0.5rem 0.5rem;
-    background-color: #efefef;
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text color */
 }
 
 table > tbody > tr > td {
     padding: 0.5rem 0.5rem;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #dee2e6; /* Light gray border */
     white-space: nowrap;
 }
 
 .card {
-    background-color: #FFF;
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .alert {
     padding: 1rem;
-    background-color: #ff4040;
+    background-color: #dc3545; /* Red alert background */
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
 
@@ -133,12 +171,12 @@ table > tbody > tr > td {
     bottom: 1rem;
     z-index: 100;
     padding: 1rem 1.5rem;
-    background-color: #00a762;
+    background-color: #28a745; /* Green notification background */
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 10px;
 }
 
-/* Login/Signup forms*/
+/* Login/Signup forms */
 
 .login-signup-form {
     height: 100vh;
@@ -151,32 +189,33 @@ table > tbody > tr > td {
     width: 360px;
     position: relative;
     z-index: 1;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     max-width: 360px;
     padding: 34px;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .login-signup-form .title {
-    font-size: 20px;
-    margin-bottom: 1rem;
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: center;
+    color: #343a40; /* Dark gray title color */
 }
 
 .login-signup-form .form .message {
     margin: 15px 0 0;
-    color: #b3b3b3;
+    color: #6c757d; /* Gray message color */
     font-size: 16px;
     text-align: center;
 }
 
 .login-signup-form .form .message a {
-    color: #5b08a7;
+    color: #ff8f00; /* Orange link color */
     text-decoration: none;
 }
 
-/* Login/Signup form */
-
+/* DefaultLayout and GuestLayout */
 
 #defaultLayout {
     display: flex;
@@ -184,21 +223,23 @@ table > tbody > tr > td {
 
 #defaultLayout aside {
     width: 240px;
-    background-color: #5b08a7;
-    padding: 1rem
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white aside background */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #defaultLayout aside > a {
     display: block;
     padding: 0.75rem 1rem;
     border-radius: 6px;
-    color: white;
+    color: #343a40; /* Dark gray text color */
     text-decoration: none;
     transition: all 0.2s;
 }
 
 #defaultLayout aside > a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background on hover */
 }
 
 #defaultLayout .content {
@@ -208,11 +249,12 @@ table > tbody > tr > td {
 #defaultLayout header {
     height: 80px;
     padding: 2rem 3rem;
-    background-color: white;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white header background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
 }
 
 #defaultLayout main {
